@@ -78,6 +78,8 @@ EXTENSIONS = {
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     "playwrightScraper.pipelines.PlaywrightscraperPipeline": 300,
+    "playwrightScraper.pipelines.ScrapingClubPipline": 310,
+    "playwrightScraper.pipelines.ContextNewsPipline": 320,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

@@ -6,7 +6,23 @@
 import scrapy
 
 
-class PlaywrightscraperItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
+class BaseItem(scrapy.Item):
     pass
+
+
+class ScrapingClubItem(BaseItem):
+    # define the fields for your item here like:
+    url = scrapy.Field()
+    image = scrapy.Field()
+    name = scrapy.Field()
+    price = scrapy.Field()
+
+
+class ContextNewsItem(BaseItem):
+    explainer = scrapy.Field()
+    published = scrapy.Field()
+    category = scrapy.Field()
+    title = scrapy.Field()
+    context = scrapy.Field()
+    content = scrapy.Field()
+    url = scrapy.Field()

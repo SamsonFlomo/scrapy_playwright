@@ -165,7 +165,7 @@ class DynamicProxyMiddleware(HttpProxyMiddleware):
     def process_request(self, request, spider):
         # Dynamically update the ROTATING_PROXY_LIST setting
         new_proxies = self.get_updated_proxies()
-        self.save_proxies_to_file(new_proxies, "proxies_folder/proxies.txt")
+        self.save_proxies_to_file(new_proxies, "others/proxies_folder/proxies.txt")
 
     def get_updated_proxies(self):
         # Return a list of proxy URLs

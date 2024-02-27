@@ -1,5 +1,6 @@
 import scrapy
 from scrapy_playwright.page import PageMethod
+from playwrightScraper.items import ScrapingClubItem
 
 
 scrolling_script = """
@@ -45,6 +46,8 @@ class ScrapingClubSpider(scrapy.Spider):
 
     def parse(self, response):
         products = response.css(".post")
+        scraping_club_item = ScrapingClubItem()
+
         for product in products:
             # scrape product data
             url = product.css("a").attrib["href"]
@@ -53,9 +56,9 @@ class ScrapingClubSpider(scrapy.Spider):
             price = product.css("h5::text").get()
 
             # add the data to the list of scraped items
-            yield {
-                "url": url,
-                "image": image,
-                "name": name,
-                "price": price
-            }
+            scraping_club_item['url'] = url
+            scraping_club_item['image'] = image
+            scraping_club_item['name'] = name
+            scraping_club_item['price'] = price
+
+            yield scraping_club_item
