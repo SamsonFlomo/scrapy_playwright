@@ -41,6 +41,11 @@ class ScrapingClubSpider(scrapy.Spider):
                             path="others/screen_shots/infinit_scroll_page.jpg",
                             full_page=True,
                             omit_background=True),
+                        PageMethod(
+                            "pdf",
+                            path="others/files_json_csv_txt_pdf/scraping_club/output.pdf",
+                            scale=1
+                        ),
                         ],
                     })
 

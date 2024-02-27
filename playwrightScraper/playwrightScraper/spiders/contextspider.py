@@ -26,6 +26,12 @@ class ContextspiderSpider(scrapy.Spider):
                         full_page=True,
                         omit_background=True
                     ),
+                    PageMethod(
+                        "pdf",
+                        path="others/files_json_csv_txt_pdf/scraping_club/output.pdf",
+                        scale=1
+                    ),
+
                 ],
             }
         )

@@ -121,7 +121,7 @@ ROTATING_PROXY_LIST_PATH = 'others/proxies_folder/proxies.txt'
 # settings.py
 
 FEEDS = {
-    'others/files_json_csv_txt/%(name)s/%(name)s.csv': {
+    'others/files_json_csv_txt_pdf/%(name)s/%(name)s.csv': {
         'format': 'csv',
         'overwrite': True
         }
