@@ -53,12 +53,12 @@ SPIDER_MIDDLEWARES = {
 DOWNLOADER_MIDDLEWARES = {
     "playwrightScraper.middlewares.PlaywrightscraperDownloaderMiddleware": 543,
     'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 300,
-    'playwrightScraper.middlewares.ScrapeOpsFakeUserAgentMiddleware': 500,
+    #'playwrightScraper.middlewares.ScrapeOpsFakeUserAgentMiddleware': 500,
     'playwrightScraper.middlewares.DynamicProxyMiddleware': 550,
     'scrapeops_scrapy.middleware.retry.RetryMiddleware': 600,
     'scrapy.downloadermiddlewares.retry.RetryMiddleware': None,
-    'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
-    'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
+    #'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
+    #'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
 }
 
 DOWNLOAD_HANDLERS = {

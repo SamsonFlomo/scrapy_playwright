@@ -12,10 +12,10 @@ class BaseItem(scrapy.Item):
 
 class ScrapingClubItem(BaseItem):
     # define the fields for your item here like:
-    url = scrapy.Field()
     image = scrapy.Field()
     name = scrapy.Field()
     price = scrapy.Field()
+    description = scrapy.Field()
 
 
 class ContextNewsItem(BaseItem):
